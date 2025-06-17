@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +18,18 @@ public class Main {
         }
         for (Map.Entry<Integer, String> entry : map.entrySet()){
             System.out.println("ID: "+entry.getKey()+ ", Name: "+entry.getValue());
+        }
+        //zadanie 3
+        System.out.println("poczatek zadania 3");
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i=1; i <=10; i++){
+            items.add(new Item(i, "item"+i));
+        }
+        List<Item> sublist = items.subList(0, 10);
+        HashSet<Item> itemset = new HashSet<>(sublist);
+
+        for (Item item : sublist) {
+            item.show();
         }
     }
 }
